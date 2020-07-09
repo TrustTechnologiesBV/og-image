@@ -4,7 +4,10 @@ import { ParsedRequest, Theme } from "./types";
 import absoluteUrl from "next-absolute-url";
 
 export function parseRequest(req: IncomingMessage) {
-  const fullUrl = absoluteUrl(req);
+  const fullUrl = absoluteUrl(
+    req,
+    `${process.env.HOSTNAME || "localhost"}:3000`
+  );
   console.log("HTTP " + req.url);
   const { pathname, query } = parse(req.url || "/", true);
   const { fontSize, images, widths, heights, theme, md } = query || {};

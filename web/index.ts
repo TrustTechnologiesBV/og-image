@@ -2,7 +2,7 @@ import { ParsedRequest, Theme, FileType } from "../api/_lib/types";
 const { H, R, copee } = window as any;
 let timeout = -1;
 
-const VERSION = "0.1";
+const VERSION = "0.1.1";
 
 interface ImagePreviewProps {
   src: string;
