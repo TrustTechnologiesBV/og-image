@@ -1,11 +1,9 @@
 {
-  "regions": ["all"],
+  "regions": ["dub1"],
   "functions": {
     "api/**": {
-      "memory": 3008
+      "memory": 1024
     }
   },
-  "rewrites": [
-    { "source": "/(.+)", "destination": "/api" }
-  ]
+  "rewrites": [{ "source": "/i/(.+)", "destination": "/api" }]
 }
